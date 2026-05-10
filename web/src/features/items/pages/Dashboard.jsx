@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
-import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
-import ItemCard from "../components/ItemCard";
-import AddItemModal from "../components/AddItemModal";
+import Navbar from "../../../components/Navbar";
+import Sidebar from "../../../components/Sidebar";
+import ItemCard from "../../../components/ItemCard";
+import AddItemModal from "../../../components/AddItemModal";
 
 import { getAllItems, createItem } from "../api/itemApi";
 

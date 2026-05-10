@@ -1,13 +1,13 @@
 import { useState } from "react"
 
-import Sidebar from "../components/Sidebar"
+import Sidebar from "../../../components/Sidebar"
 
 import { createItem } from "../api/itemApi"
 
 import "../styles/Dashboard.css"
 import "../styles/forms.css"
 
-function ReportFound() {
+function ReportLost() {
 
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
@@ -17,19 +17,19 @@ function ReportFound() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        await createItem({
-            itemName,
-            description,
-            location,
-            imageUrl,
-            type: "Found",
-            status: "Open",
-            ownerEmail:
-                localStorage.getItem("userEmail")
-        });
-        window.location.href = "/browse";
+      await createItem({
+          itemName,
+          description,
+          location,
+          imageUrl,
+          type: "Lost",
+          status: "Open",
+          ownerEmail:
+              localStorage.getItem("userEmail")
+      });
+      window.location.href = "/browse";
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
   };
 
@@ -42,8 +42,8 @@ function ReportFound() {
       <div className="dashboard-container">
 
         <div className="page-header">
-          <h1>Report Found Item</h1>
-          <p>Help return items to their owners.</p>
+          <h1>Report Lost Item</h1>
+          <p>Provide details about your lost item.</p>
         </div>
 
         <form className="item-form" onSubmit={handleSubmit}>
@@ -90,4 +90,4 @@ function ReportFound() {
   )
 }
 
-export default ReportFound
+export default ReportLost
