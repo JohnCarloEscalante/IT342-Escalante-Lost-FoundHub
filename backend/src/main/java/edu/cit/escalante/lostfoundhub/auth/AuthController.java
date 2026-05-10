@@ -1,8 +1,4 @@
-package edu.cit.escalante.lostfoundhub.controller;
-
-import edu.cit.escalante.lostfoundhub.dto.LoginRequest;
-import edu.cit.escalante.lostfoundhub.dto.RegisterRequest;
-import edu.cit.escalante.lostfoundhub.service.AuthService;
+package edu.cit.escalante.lostfoundhub.auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

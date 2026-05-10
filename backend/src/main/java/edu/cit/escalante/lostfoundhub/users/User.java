@@ -1,4 +1,4 @@
-package edu.cit.escalante.lostfoundhub.model;
+package edu.cit.escalante.lostfoundhub.users;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;

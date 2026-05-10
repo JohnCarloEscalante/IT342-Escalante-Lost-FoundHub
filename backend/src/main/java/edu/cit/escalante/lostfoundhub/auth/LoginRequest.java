@@ -1,18 +1,9 @@
-package edu.cit.escalante.lostfoundhub.dto;
+package edu.cit.escalante.lostfoundhub.auth;
 
-public class RegisterRequest {
+public class LoginRequest {
 
-    private String name;
     private String email;
     private String password;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getEmail() {
         return email;
