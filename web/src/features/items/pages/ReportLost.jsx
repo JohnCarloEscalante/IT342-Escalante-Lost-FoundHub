@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-import Sidebar from "../../../components/Sidebar"
+import Sidebar from "../../../shared/components/Sidebar"
 
 import { createItem } from "../api/itemApi"
 

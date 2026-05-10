@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-import Sidebar from "../../../components/Sidebar";
-import ItemCard from "../../../components/ItemCard";
+import Sidebar from "../../../shared/components/Sidebar";
+import ItemCard from "../components/ItemCard";
 
 import { getAllItems } from "../api/itemApi";
 
