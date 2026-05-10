@@ -7,6 +7,7 @@ import edu.cit.escalante.lostfoundhub.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import edu.cit.escalante.lostfoundhub.security.JwtUtil;
 
 @Service
 public class AuthService {
@@ -16,6 +17,9 @@ public class AuthService {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    private JwtUtil jwtUtil;
 
     public String register(RegisterRequest request){
 
@@ -37,18 +41,22 @@ public class AuthService {
 
     public String login(LoginRequest request){
 
-        User user = userRepository.findByEmail(request.getEmail())
-                .orElse(null);
+        User user = userRepository.findByEmail(
+                request.getEmail()
+        ).orElse(null);
 
         if(user == null){
             return "Invalid email or password";
         }
 
-        if(!passwordEncoder.matches(request.getPassword(), user.getPassword())){
+        if(!passwordEncoder.matches(
+                request.getPassword(),
+                user.getPassword()
+        )){
             return "Invalid email or password";
         }
 
-        return "Login successful";
+        return jwtUtil.generateToken(user.getEmail());
     }
 
 }

@@ -1,0 +1,90 @@
+.item-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+}
+
+.item-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.item-card-content {
+    padding: 18px;
+}
+
+.item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-top h3 {
+    color: #1565c0;
+}
+
+.item-type {
+    font-weight: bold;
+    margin: 10px 0;
+    color: #444;
+}
+
+.location {
+    margin-top: 12px;
+    color: #555;
+}
+
+.owner {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+}
+
+.open-badge {
+    background: #1976d2;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.resolved-badge {
+    background: #43a047;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.item-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.resolve-btn {
+    flex: 1;
+    background: #43a047;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    flex: 1;
+    background: #e53935;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}

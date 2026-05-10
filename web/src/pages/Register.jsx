@@ -45,7 +45,7 @@ function Register() {
 
       await registerUser(formData)
 
-      alert('Registration Successful!')
+      alert('Registration successful! Please login.')
 
       navigate('/login')
 

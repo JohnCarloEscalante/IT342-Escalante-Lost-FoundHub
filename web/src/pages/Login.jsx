@@ -40,13 +40,11 @@ function Login() {
       const response = await loginUser(formData)
 
       localStorage.setItem(
-        'user',
-        JSON.stringify(response.data)
-      )
+          "token",
+          response.data
+      );
 
-      alert('Login Successful!')
-
-      navigate('/dashboard')
+      navigate("/dashboard");
 
     } catch (error) {
 
