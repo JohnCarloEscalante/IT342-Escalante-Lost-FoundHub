@@ -18,7 +18,7 @@ function ReportFound() {
     e.preventDefault();
     try {
         await createItem({
-            itemName,
+            itemName: title,
             description,
             location,
             imageUrl,

@@ -8,6 +8,7 @@ import ReportLost from "./features/items/pages/ReportLost";
 import ReportFound from "./features/items/pages/ReportFound";
 import BrowseItems from "./features/items/pages/BrowseItems";
 import MyReports from "./features/items/pages/MyReports";
+import ProfileSettings from "./features/users/pages/ProfileSettings";
 import ProtectedRoute from "./features/auth/components/ProtectedRoute";
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
         <Route path="/report-found" element={<ProtectedRoute><ReportFound /></ProtectedRoute>} />
         <Route path="/browse" element={<ProtectedRoute><BrowseItems /></ProtectedRoute>} />
         <Route path="/my-reports" element={<ProtectedRoute><MyReports /></ProtectedRoute>} />
-        
+        <Route path="/profile" element={<ProtectedRoute><ProfileSettings /></ProtectedRoute>} />
       </Routes>
     </BrowserRouter>
   );

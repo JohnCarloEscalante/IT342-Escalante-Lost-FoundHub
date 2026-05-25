@@ -28,6 +28,10 @@ function Sidebar() {
                 My Reports
             </Link>
 
+            <Link to="/profile">
+                Profile / Settings
+            </Link>
+
             <button
                 className="logout-btn"
                 onClick={() => {

@@ -4,10 +4,12 @@
     background: #f4f7fb;
 }
 
-.dashboard-content {
-    flex: 1;
-    padding: 35px;
-    overflow-y: auto;
+.dashboard-container {
+    margin-left: 250px; /* ✅ pushes content away from sidebar */
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .dashboard-header {

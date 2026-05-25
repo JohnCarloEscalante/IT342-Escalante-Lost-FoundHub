@@ -37,7 +37,7 @@ function BrowseItems() {
 
             <Sidebar />
 
-            <div className="dashboard-content">
+            <div className="dashboard-container">
 
                 <h1>Browse Items</h1>
 
@@ -54,13 +54,42 @@ function BrowseItems() {
                 <div className="items-grid">
 
                     {items
-                        .filter((item) =>
-                            item.itemName
-                                ?.toLowerCase()
-                                .includes(
-                                    search.toLowerCase()
-                                )
-                        )
+                        .filter((item) => {
+
+                            const keyword =
+                                search.toLowerCase();
+
+                            return (
+                                item.itemName
+                                    ?.toLowerCase()
+                                    .includes(keyword)
+
+                                ||
+
+                                item.description
+                                    ?.toLowerCase()
+                                    .includes(keyword)
+
+                                ||
+
+                                item.location
+                                    ?.toLowerCase()
+                                    .includes(keyword)
+
+                                ||
+
+                                item.type
+                                    ?.toLowerCase()
+                                    .includes(keyword)
+
+                                ||
+
+                                item.status
+                                    ?.toLowerCase()
+                                    .includes(keyword)
+                            );
+                        })
+                        
                         .map((item) => (
 
                             <ItemCard

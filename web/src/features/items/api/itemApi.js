@@ -2,11 +2,11 @@ import axios from "axios";
 
 const API_URL = "http://localhost:8080/api/items";
 
-export const getAllItems = () => {
+export const getAllItems = async () => {
     return axios.get(API_URL);
 };
 
-export const createItem = (itemData) => {
+export const createItem = async (itemData) => {
     return axios.post(API_URL, itemData);
 };
 

@@ -18,6 +18,8 @@ public class User {
 
     private String password;
 
+    private String profileImage;
+
     private LocalDateTime createdAt = LocalDateTime.now();
 
     public User() {}
@@ -38,6 +40,10 @@ public class User {
         return email;
     }
 
+    public String getProfileImage() {
+        return profileImage;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
@@ -52,5 +58,9 @@ public class User {
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
+    }
+
+    public void setProfileImage(String profileImage) {
+        this.profileImage = profileImage;
     }
 }
